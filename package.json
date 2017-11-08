@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "cookie": "^0.3.1",
+    "draftlog": "^1.0.12",
+    "inquirer": "^3.3.0",
+    "request": "^2.83.0",
+    "superagent": "^3.8.0"
+  }
+}
