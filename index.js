@@ -30,7 +30,7 @@ function zeroPad(num, numZeros) {
     return zeroString+n;
 }
 
-inquirer.prompt([ 
+inquirer.prompt([
     {
         name: 'username',
         message: 'ASU Username:'
@@ -49,11 +49,11 @@ inquirer.prompt([
             { name: 'Fall', value: '40'}
         ]
     },
-    // {
-    //     name: 'start',
-    //     message: 'Start index',
-    //     default: 0
-    // }
+    {
+        name: 'start',
+        message: 'Start index',
+        default: 0
+    }
 ]).then((answers) => {
     // login
     agent
@@ -79,10 +79,9 @@ inquirer.prompt([
         .send({ term_in: year + answers.term })
         .end((err, res) => {
             const $ = cheerio.load(res.text);
-
             // indicates presence of add-by-CRN form,
             // meaning the PIN has already been successfully entered
-            if ($(`[action="\/pls\/PROD\/bwckcoms.P_Regs"]`)) {
+            if ($(`[action="\/pls\/PROD\/bwckcoms.P_Regs"]`).length > 0) {
                 console.log('Looks like you have already entered a PIN.');
                 return;
             }
