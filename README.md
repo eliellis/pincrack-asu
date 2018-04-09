@@ -1,6 +1,6 @@
 # pincrack-asu
 
-Appalachain State class registration system PIN "cracker".
+Appalachian State class registration system PIN "cracker".
 
 ## usage
 
