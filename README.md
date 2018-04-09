@@ -1,4 +1,4 @@
-# pinch
+# pincrack-asu
 
 Appalachain State class registration system PIN "cracker".
 
